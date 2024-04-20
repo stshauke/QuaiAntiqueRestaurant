@@ -1,2 +1,24 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+// html et footer permettent de fixer le footer dans le peid de page.
+// raison pour laquelle nous avons mis le footer dans la position absolute et le html à la position 
+// relative avec une taille minimum de 100%. C'est-à-dire qu'il prend toute la hauteur.
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+// Sans cette marche bottom, le contenu de main va se chevaucher, raison pour laquelle nous avons mis
+// margin-bottom à 250px. ce 250px est plus ou moins la taille de footer. 
+main{
+    margin-bottom: 250px;
+}
+
+footer.footer {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
