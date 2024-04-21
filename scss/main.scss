@@ -60,3 +60,33 @@ p{
 .text-justify {
     text-align: justify;
 }
+
+
+// Maintenant, il nous faut masquer le titre par défaut, nous pouvons lui mettre l’opacité à 0 par défaut. 
+//Lorsque nous survolons le bloc « image-card », nous, devons changer l’opacité du titre à 1, et ajouter 
+//un filtre sur l’image pour la foncer. Nous pouvons aussi ajouter une transition pour que l’animation 
+//soit fluide. Nous obtenons donc ce code final pour nos images :
+.image-card {
+    position: relative;
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+        img{
+            filter:brightness(0.3);
+        }
+    }
+
+    img{
+        transition: all 0.3s;
+
+    }
+    .titre-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50, -50);
+        opacity: 0;
+        transition: all 0.3s;
+    }
+}
