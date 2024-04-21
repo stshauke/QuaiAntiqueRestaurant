@@ -13,7 +13,7 @@ html{
 // Sans cette marche bottom, le contenu de main va se chevaucher, raison pour laquelle nous avons mis
 // margin-bottom à 250px. ce 250px est plus ou moins la taille de footer. 
 main{
-    margin-bottom: 250px;
+    margin-bottom: 270px;
 }
 
 footer.footer {
@@ -30,6 +30,7 @@ p{
 
 .hero-scene {
     position: relative;
+    margin-bottom: 15px;
     &::before{
     content: "";
     position: absolute;
@@ -89,4 +90,8 @@ p{
         opacity: 0;
         transition: all 0.3s;
     }
+}
+
+.form-label{
+    color: $primary;
 }
