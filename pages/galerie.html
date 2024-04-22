@@ -5,6 +5,10 @@
 </div>
 
 <div class="container">
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo </button>
+    </div>
+
     <!--Dans cet exemple, sur les petits écrans, chaque ligne aura 2 éléments (grâce à row-cols-2). 
         Ensuite, lorsque la taille de l'écran atteint le point de rupture « lg » (≥ 992 px), 
         chaque ligne contiendra 3 éléments (grâce à row-cols-lg-3).-->
@@ -14,6 +18,7 @@
                 <!--La classe rounded est une classe bootstrap pour arrondir l'image-->
                 <img src="../images/food.JPG" alt="" class="rounded w-100"> 
                 <p class="titre-image">Les épices</p>
+                
             </div>
         </div>
 
@@ -26,31 +31,104 @@
 
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/food3.JPG" alt="" class="rounded w-100">
+                <img src="../images/food32.JPG" alt="" class="rounded w-100">
                 <p class="titre-image">Plat français</p>
             </div>
         </div>
 
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/food4.JPG" alt="" class="rounded w-100">
+                <img src="../images/pixabay1.JPG" alt="" class="rounded w-100">
                 <p class="titre-image">Plat arabe</p>
             </div>
         </div>
 
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/food5.JPG" alt="" class="rounded w-100">
+                <img src="../images/pixabay2.JPG" alt="" class="rounded w-100">
                 <p class="titre-image">Fast food</p>
             </div>
         </div>
 
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/food6.JPG" alt="" class="rounded w-100">
+                <img src="../images/pixabay3.JPG" alt="" class="rounded w-100">
                 <p class="titre-image">Fast food & pizza</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="text-center">
+        <a href="#" class="btn btn-primary">Réserver </a>
+    </div>
 </div>
+
+
+
+<!-- Modal Edition -->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h2>
+          <!--data-bs-dismiss="modal" c'est pour fermer le modal-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                <label for="NamePhotoInput" class="form-label" placeholder="Lasagne à la bolognese">Titre</label>
+                <input type="text" class="form-control" id="NamePhotoInput">
+                </div>
+                <div class="mb-3">
+                <label for="ImageInput" class="form-label">Image</label>
+                <input type="file" class="form-control" id="ImageInput">
+                </div>
+                
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
+                </div>
+    
+                
+            </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  
+<!-- Modal supression -->
+<div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Etes-vous sûr de vouloir supprimer cette photo</h2>
+          <!--data-bs-dismiss="modal" permet de fermer le modal-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                <p>Titre</p>
+                    <img src="../images/food.JPG" alt="" class="rounded w-100"> 
+                </div>
+                
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger">Supprimer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                </div>
+    
+                
+            </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
