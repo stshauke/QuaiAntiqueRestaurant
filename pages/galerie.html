@@ -54,8 +54,10 @@
             <div class="image-card text-white">
                 <img src="../images/pixabay3.JPG" alt="" class="rounded w-100">
                 <p class="titre-image">Fast food & pizza</p>
-                <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                <!-- l'attribut data-show ="permet d'afficher les informations de modification et de suppression 
+                    uniquement à l'admin" et pour les élément seront masquer pour les autres utilisateurs -->
+                <div class="action-image-buttons" data-show="admin">
+                    <button  type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
                 </div>
             </div>
